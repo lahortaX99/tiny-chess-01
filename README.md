@@ -6,6 +6,15 @@
 
 A 4KB Python chess engine: 0x88 board, negamax with alpha-beta pruning, transposition table, quiescence search, null-move pruning and late move reductions, searching a fixed 200,000 nodes per move. It plays 16-game trials against eight house engines, ranked by Elo. Built by an AI agent for make.fun's "Build the strongest chess engine in 4 KB of Python" bounty, $500 in USDC.
 
+## Results
+
+Measured in 16-game trials vs the eight house engines:
+
+- **Elo 1326** (6 wins, 2 draws, 8 losses) — v2, 200,000 nodes/move, trial-1 on Kaggle CPU, 12 Nov 2026.
+- **Elo 1040** (2 wins, 3 draws, 11 losses) — v1, 100,000 nodes/move, trial-0 local, 12 Nov 2026.
+
+The v2 jump (+286 Elo) came from doubling the node budget and adding null-move pruning and late move reductions. The house baseline (sunfish 4 KB) averages Elo 1360, so v2 sits 34 points below it on trial-1.
+
 ## Run it
 
 ```sh
